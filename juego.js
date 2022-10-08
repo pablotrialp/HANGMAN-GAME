@@ -42,9 +42,12 @@ let miedo = [
 
 let fruta = [
 
-    'pera',
-    'manzana',
-    'uva',
+    'LEON',
+    'JIRAFA',
+    'CABRA',
+    'PERRO',
+    'GATO',
+    'OVEJA',
 
 ];
 
