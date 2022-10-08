@@ -18,24 +18,16 @@ let caja_boton = id('caja_boton');
 
 
 let miedo = [
-    'TERROR',     /* 0 */
-    'MUERTE',     /* 1 */
-    'ZOMBIE',    /* 2 */
-    'FANTASMA',       /* 3 */
-    'MIEDO',     /* 4 */
-    'VENENO',       /* 5 */
-    'BRUJA',   /* 6 */
-    'MONSTRUO',     /* 7 */
-    'VAMPIRO',  /* 8 */
-    'LOBO',     /* 9 */
-    'DRACULA',  /* 10 */
-    'DRAGON',   /* 11 */
-    'BRUJERIA',  /* 12 */
-    'HORROR',   /* 13 */
-    'HECHIZO', /* 14 */
-    'DEMONIO', /* 15 */
-    'DIABLO', /* 16 */
-    'LUCIFER', /* 17 */
+    'CHILE',     /* 0 */
+    'PERU',     /* 1 */
+    'ECUADOR',    /* 2 */
+    'SUIZA',       /* 3 */
+    'BOLIVIA',     /* 4 */
+    'BRASIL',       /* 5 */
+    'URUGUAY',   /* 6 */
+    'COLOMBIA',     /* 7 */
+    'MEXICO',  /* 8 */
+    'CANADA',     /* 9 */
 
 
 ];
