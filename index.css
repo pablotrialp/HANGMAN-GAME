@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+
+body {
+
+  position: relative;
+  width: 100%;
+  margin: 0;
+  background: url(./img/principal.png) no-repeat center;
+  background-size: cover;
+  font-family: 'Carter One', Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+
+#terror {
+  display: block;
+  width: 20%;
+  background: #4E9CAF;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  line-height: 25px;
+  text-align: center;
+  padding: 40px;
+  
+
+}
+
+#funny {
+  display: block;
+  width: 20%;
+  background: #4E9CAF;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  line-height: 25px;
+  padding: 40px;
+  
+
+
+
+}
+
+.padre {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+ul {
+  gap: 20%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  margin: 0 .75rem;
+}
+
+
+@media screen and (max-width: 700px) {
+
+  body {
+
+    display: flex;
+    width: 100%;
+    margin: 0;
+    background: url(./img/fondoResponsivo.png) no-repeat center;
+    background-size: cover;
+    font-family: 'Carter One', Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+  }
+
+  .padre {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+}
+
+ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 200px;
+}
+
+
+#terror {
+  display: block;
+  width: 50%;
+  height: 12.5%;
+  background: #4E9CAF;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  line-height: 25px;
+  text-align: center;
+  padding: 40px;
+
+}
+
+#funny {
+  display: block;
+  width: 50%;
+  height: 12.5%;
+  background: #4E9CAF;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  line-height: 25px;
+  padding: 40px;
+
+
+
+}
+
+}

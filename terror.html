@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="estilos.css" />
+    <script src="funciones.js"></script>
+    <title>Ahorcado</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body id="bodi">
+    <audio loop   id="audioBack">
+        <source src="./audio/musica.mp3" type="audio/mp3">
+    </audio>
+    <audio id="click">
+        <source src="./audio/click.wav" type="audio/wav">
+    </audio>
+
+    <header>
+        <div>
+            <p id="score"></p>
+            <img id="cartel" src="./img/cartel0.png">
+
+        </div>
+        
+        <ul>
+            <li id="volver"><a href="./index.html" style="text-decoration: none;">Volver pag. Princip</a></li>
+            
+        </ul>
+        
+    </header>
+    <main>
+        <img id="imagen" src="img/img0.png" alt="ahorcado" />
+        <div id="caja">
+            <p id="palabra_a_adivinar">
+            </p>
+           
+
+            <div id="letras">
+                <button>q</button>
+                <button>w</button>
+                <button>e</button>
+                <button>r</button>
+                <button>t</button>
+                <button>y</button>
+                <button>u</button>
+                <button>i</button>
+                <button>o</button>
+                <button>p</button>
+                <button>a</button>
+                <button>s</button>
+                <button>d</button>
+                <button>f</button>
+                <button>g</button>
+                <button>h</button>
+                <button>j</button>
+                <button>k</button>
+                <button>l</button>
+                <button>ñ</button>
+                <button>z</button>
+                <button>x</button>
+                <button>c</button>
+                <button>v</button>
+                <button>b</button>
+                <button>n</button>
+                <button>m</button>
+            </div>
+        </div>
+    </main>
+        <div id="botones">
+            <div id="caja_boton">
+                <h3 id="elegir"> Elija una categoria o agregue una palabra propia</h3>
+            </div>
+
+            <div id="botoncitos">
+                <button id="btnMiedo" onclick='miedos()'>Terror</button>
+                <button id="btnFruta" onclick='frutas()'>Frutas</button>
+                <button id="btnMispalabra" onclick='mispalabras()'>Mis Palabras</button>
+                <input type='text' id="texto" placeholder="Ingrese una palabra max. 8 letras">
+                <button id="agregarPalabra" onclick='agregarPalabra()'>Agregar palabra</button>
+            </div>  
+
+        </div>
+
+        <div id="botonesPrincip">
+            
+            <button id="agregarPalabraPrincip" onclick='agregarPalabraPrincip()'>Agregar una palabra</button>
+            <button id="cancelar" onclick='cancel()'>Cancelar</button>
+            
+        </div>
+    
+
+    <script src="juego.js"></script>
+    
+    <footer>
+        <p class="nombre">© Design by Pablo Nahuel Macedo</p>
+
+        <div class="redes">
+            <a href="https://www.linkedin.com/in/pablonahuelmacedo/">
+                <img class="linkedin" src="img/linkedin.png" alt="Logo de linkedin">
+            </a>
+            <a href="https://github.com/pablotrialp">
+                <img class="github" src="img/github.png" alt="Logo de Git Hub">
+            </a>
+        </div>
+        
+        
+
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,758 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#jugar {
+    display: none
+}
+
+#btnJugar {
+    display: none;
+}
+
+
+
+
+body {
+    display: flex;
+    width: 100%;
+
+    background: url(./img/fondo.png) no-repeat center;
+    background-size: cover;
+    font-family: 'Carter One', Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+#cartel {
+    width: 200px;
+}
+
+#score {
+    font-size: 25px;
+    color: white
+}
+
+main {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background: transparent;
+    display: flex;
+    gap: 30px;
+}
+
+#imagen {
+    width: 50%;
+}
+
+#palabra_a_adivinar {
+    height: 3em;
+}
+
+#palabra_a_adivinar span {
+    vertical-align: bottom;
+    font-size: 2em;
+    border-bottom: 2px solid #f7f3f3;
+    width: 30px;
+    text-align: center;
+    margin-right: 6px;
+    display: inline-block;
+    color: white;
+    /* sin esto, por ser un elemento de línea, no tomaría el width */
+}
+
+#letras {
+
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+#letras button {
+    width: 78px;
+    padding: 6px 0;
+    text-align: center;
+
+}
+
+#letras button:hover {
+    color: #258460;
+    background-color: #21f3d0;
+    box-shadow: 0 0 10px #21f3d0, 0 0 40px #21f3d0, 0 0 80px #21f3d0;
+    transition-delay: 0.2s;
+}
+
+
+
+#botones {
+    margin-left: 0;
+    display: flex;
+    width: 100%;
+
+    gap: 20px;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
+
+#botoncitos {
+    display: flex;
+    width: 100%;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+
+}
+
+
+
+
+#botonesPrincip {
+    display: flex;
+    margin-left: 0;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#texto {
+    width: 30%;
+    height: 50px;
+    border-radius: 10px;
+}
+
+#jugar {
+
+    width: 300px;
+    margin-left: 80px;
+    background-color: #011522;
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #21f3d0;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 10px;
+    overflow: hidden;
+    transition: 0.2s;
+    border-color: aquamarine;
+    border-radius: 10px;
+}
+
+#jugar:hover {
+    color: #258460;
+    background-color: #21f3d0;
+    box-shadow: 0 0 10px #21f3d0, 0 0 40px #21f3d0, 0 0 80px #21f3d0;
+    transition-delay: 0.2s;
+}
+
+#cancelar {
+    width: 50%;
+    background-color: #011522;
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #21f3d0;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 10px;
+    overflow: hidden;
+    transition: 0.2s;
+    border-color: aquamarine;
+    border-radius: 10px;
+}
+
+#cancelar:hover {
+    color: #258460;
+    background-color: #21f3d0;
+    box-shadow: 0 0 10px #21f3d0, 0 0 40px #21f3d0, 0 0 80px #21f3d0;
+    transition-delay: 0.2s;
+}
+
+
+
+#agregarPalabra {
+    width: 20%;
+    background-color: #011522;
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #21f3d0;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 10px;
+    overflow: hidden;
+    transition: 0.2s;
+    border-color: aquamarine;
+    border-radius: 10px;
+}
+
+#agregarPalabra:hover {
+    color: #258460;
+    background-color: #21f3d0;
+    box-shadow: 0 0 10px #21f3d0, 0 0 40px #21f3d0, 0 0 80px #21f3d0;
+    transition-delay: 0.2s;
+}
+
+
+#jugarPrincip {
+
+    margin-left: -120px;
+    width: 250px;
+    background-color: #011522;
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #21f3d0;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 10px;
+    overflow: hidden;
+    transition: 0.2s;
+    border-color: aquamarine;
+    border-radius: 10px;
+}
+
+#jugarPrincip:hover {
+    color: #258460;
+    background-color: #21f3d0;
+    box-shadow: 0 0 10px #21f3d0, 0 0 40px #21f3d0, 0 0 80px #21f3d0;
+    transition-delay: 0.2s;
+}
+
+#agregarPalabraPrincip {
+    width: 30%;
+    background-color: #011522;
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #21f3d0;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 10px;
+    overflow: hidden;
+    transition: 0.2s;
+    border-color: aquamarine;
+    border-radius: 10px;
+}
+
+#agregarPalabraPrincip:hover {
+    color: #258460;
+    background-color: #21f3d0;
+    box-shadow: 0 0 10px #21f3d0, 0 0 40px #21f3d0, 0 0 80px #21f3d0;
+    transition-delay: 0.2s;
+}
+
+
+
+
+
+
+footer {
+
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 5px;
+    margin-top: 60px;
+    background-color: #000;
+
+}
+
+.nombre {
+
+    width: 100%;
+    display: flex;
+    color: white;
+    font-size: 0.8rem;
+
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+
+
+}
+
+.redes {
+    gap: 5%;
+    margin-left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+
+.linkedin {
+    width: 50%;
+}
+
+.github {
+    width: 50%;
+}
+
+
+.btnUsed {
+    color: red;
+    border: none;
+    background: rgba(253, 5, 5, 0.2);
+    border-top: 1px solid transparent;
+    border-left: 1px solid transparent;
+    outline: none;
+
+}
+
+.btnUsedHit {
+    color: #21fc5b;
+    border: none;
+    background: rgba(5, 253, 38, 0.2);
+    border-top: 1px solid transparent;
+    border-left: 1px solid transparent;
+    outline: none;
+
+}
+
+#elegir {
+    font-size: 15px;
+
+}
+
+#caja_boton {
+    border-radius: 10px;
+    background-color: whitesmoke;
+    padding: 10px;
+}
+
+
+
+#volver {
+    display: block;
+    width: 80%;
+    background: #4E9CAF;
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    line-height: 25px;
+    text-align: center;
+
+}
+
+#btnMiedo {
+
+    background-color: #011522;
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #21f3d0;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 10px;
+    overflow: hidden;
+    transition: 0.2s;
+    border-color: aquamarine;
+    border-radius: 10px;
+}
+
+#btnMiedo:hover {
+    color: #258460;
+    background-color: #21f3d0;
+    box-shadow: 0 0 10px #21f3d0, 0 0 40px #21f3d0, 0 0 80px #21f3d0;
+    transition-delay: 0.2s;
+}
+
+#btnFruta {
+
+    background-color: #011522;
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #21f3d0;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 10px;
+    overflow: hidden;
+    transition: 0.2s;
+    border-color: aquamarine;
+    border-radius: 10px;
+}
+
+#btnFruta:hover {
+    color: #258460;
+    background-color: #21f3d0;
+    box-shadow: 0 0 10px #21f3d0, 0 0 40px #21f3d0, 0 0 80px #21f3d0;
+    transition-delay: 0.2s;
+}
+
+#btnMispalabra {
+
+    background-color: #011522;
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #21f3d0;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 10px;
+    overflow: hidden;
+    transition: 0.2s;
+    border-color: aquamarine;
+    border-radius: 10px;
+}
+
+#btnMispalabra:hover {
+    color: #258460;
+    background-color: #21f3d0;
+    box-shadow: 0 0 10px #21f3d0, 0 0 40px #21f3d0, 0 0 80px #21f3d0;
+    transition-delay: 0.2s;
+}
+
+
+
+
+@media screen and (max-width: 700px) {
+
+
+
+    header {
+        display: flex;
+        gap: 10%;
+        background-color: transparent;
+        padding: 10px;
+        text-align: center;
+        margin-bottom: 20px;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+    body {
+
+        display: flex;
+
+        width: 100%;
+
+        background: url(./img/forma.jpg) center center / cover no-repeat;
+        font-family: 'Carter One', Arial, Helvetica, sans-serif;
+        min-height: 100vh;
+
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+
+
+    main {
+        display: flex;
+        padding: 0px;
+        margin: 0px;
+        background: transparent;
+        width: 100%;
+        gap: 30px;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #botonesPrincip {
+        display: flex;
+        margin-left: 0;
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+
+    #imagen {
+
+
+        width: 50%;
+
+    }
+
+    #caja {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #palabra_a_adivinar {
+        width: 100%;
+        height: 3em;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+    }
+
+    #palabra_a_adivinar span {
+        vertical-align: bottom;
+        font-size: 1.5em;
+        border-bottom: 2px solid black;
+        width: 20px;
+        text-align: center;
+        margin-right: 6px;
+        display: inline-block;
+    }
+
+    #letras {
+        width: 80%;
+        gap: 9px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        flex-direction: row;
+    }
+
+    #letras button {
+        background-color: #1058ed;
+        width: 33px;
+        height: 33px;
+        padding: 6px 0;
+        text-align: center;
+        margin-right: -10px;
+    }
+
+    button {
+
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    #botones {
+        margin-left: 0;
+        display: flex;
+        width: 100%;
+        margin-top: 100px;
+        justify-items: center;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
+    #botoncitos {
+        display: flex;
+        width: 100%;
+        justify-items: center;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        flex-direction: row;
+
+    }
+
+    #jugar {
+        margin-left: 35px;
+        width: 150px;
+        background-color: #011522;
+        position: relative;
+        display: inline-block;
+        padding: 0PX;
+        color: #21f3d0;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        font-size: 10px;
+        overflow: hidden;
+        transition: 0.2s;
+        border-color: aquamarine;
+        border-radius: 10px;
+    }
+
+    #agregarPalabra {
+        width: 30%;
+        background-color: #011522;
+        position: relative;
+        display: inline-block;
+        padding: 15px;
+        color: #21f3d0;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        font-size: 10px;
+        overflow: hidden;
+        transition: 0.2s;
+        border-color: aquamarine;
+        border-radius: 10px;
+    }
+
+    #texto {
+        width: 60%;
+        height: 50px;
+        border-radius: 10px;
+    }
+
+    #jugarPrincip {
+        height: 20px;
+        background-color: #011522;
+        position: relative;
+        display: inline-block;
+        padding: 15px;
+        color: #21f3d0;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        font-size: 10px;
+        overflow: hidden;
+        transition: 0.2s;
+        border-color: aquamarine;
+        border-radius: 10px;
+        width: 200px;
+    }
+
+    #agregarPalabraPrincip {
+        height: 50px;
+        width: 50%;
+        margin-top: 8px;
+        background-color: #011522;
+        position: relative;
+        display: inline-block;
+        padding: 15px;
+        color: #21f3d0;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        font-size: 10px;
+        overflow: hidden;
+        transition: 0.2s;
+        border-color: aquamarine;
+        border-radius: 10px;
+    }
+
+    footer {
+
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        box-sizing: border-box;
+        padding: 5px;
+        margin-top: 60px;
+        background-color: #000;
+
+    }
+
+    .nombre {
+
+        width: 100%;
+        display: flex;
+        color: white;
+        font-size: 0.8rem;
+        font-weight: bold;
+
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: nowrap;
+        flex-direction: row;
+
+
+    }
+
+    .redes {
+        margin-left: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
+
+
+    .linkedin {
+        width: 15px;
+    }
+
+    .github {
+        width: 15px;
+    }
+
+    #resultado {
+        color: rgb(236, 235, 235);
+    }
+
+
+}
